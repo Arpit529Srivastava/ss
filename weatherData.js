@@ -11,11 +11,14 @@ function fetchWeatherAPI(city) {
       reject("City name is missing");
       return;
     }
-    if (!weatherDataset.hasOwnProperty(city)) {
+    var matchedKey = Object.keys(weatherDataset).find(function (key) {
+      return key.toLowerCase() === city.toLowerCase();
+    });
+    if (!matchedKey) {
       reject("City not found");
       return;
     }
-    resolve(weatherDataset[city]);
+    resolve(weatherDataset[matchedKey]);
   });
 }
 
