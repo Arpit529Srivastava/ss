@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f3f4f6;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .card {
+      width: 420px;
+      padding: 36px 40px 32px;
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    }
+
+    h1 {
+      margin: 0 0 28px;
+      text-align: center;
+      font-size: 32px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+
+    input {
+      width: 100%;
+      height: 42px;
+      padding: 0 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .error {
+      display: block;
+      min-height: 20px;
+      margin: 6px 0 16px;
+      color: #ef4444;
+      font-size: 14px;
+    }
+
+    button {
+      width: 100%;
+      height: 48px;
+      margin-top: 8px;
+      border: none;
+      border-radius: 10px;
+      background: #22c55e;
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #16a34a;
+    }
+
+    #success {
+      margin: 16px 0 0;
+      text-align: center;
+      color: #16a34a;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Registration Form</h1>
+    <form id="registrationForm" novalidate>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
+      <span id="nameError" class="error"></span>
+
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email">
+      <span id="emailError" class="error"></span>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
+      <span id="passwordError" class="error"></span>
+
+      <label for="confirmPassword">Confirm Password:</label>
+      <input type="password" id="confirmPassword" name="confirmPassword">
+      <span id="confirmPasswordError" class="error"></span>
+
+      <button type="submit">Submit</button>
+      <p id="success"></p>
+    </form>
+  </div>
+  <script src="registrationForm.js"></script>
+</body>
+</html>
